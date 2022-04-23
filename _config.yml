@@ -15,11 +15,11 @@
 minimal_mistakes_skin: 'dark' # default, "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: 'en-US'
+locale: 'ko-KR'
 title: 'vVbb'
 title_separator: '-'
 subtitle: # site tagline that appears below site title in masthead
-name: 'iidihi'
+name: 'kidihi'
 description: 'log'
 url: 'https://rpdahxn.github.io' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
@@ -30,9 +30,10 @@ masthead_title: 'kidihi log' # overrides the website title displayed in the mast
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider: 'disqus'
+  # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: 'rpdahxn-github-io'
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -103,7 +104,7 @@ analytics:
 author:
   name: 'kidihi'
   avatar: 'assets/profile.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: 'logging'
+  bio: 'student'
   location: 'Somewhere'
   email:
   links:
@@ -121,7 +122,7 @@ author:
       # url: "https://facebook.com/"
     - label: 'GitHub'
       icon: 'fab fa-fw fa-github'
-      # url: "https://github.com/"
+      url: 'https://github.com/rpdahxn'
     - label: 'Instagram'
       icon: 'fab fa-fw fa-instagram'
       # url: "https://instagram.com/"
@@ -137,7 +138,7 @@ footer:
       # url:
     - label: 'GitHub'
       icon: 'fab fa-fw fa-github'
-      # url:
+      url: 'https://github.com/rpdahxn'
     - label: 'GitLab'
       icon: 'fab fa-fw fa-gitlab'
       # url:
@@ -275,6 +276,14 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+
+  # _pages                      : 해당 하단 영역이 새로 추가되었습니다.
+  - scope:
+      path: '_pages'
+      type: pages
+    values:
+      layout: single
+      author_profile: true
