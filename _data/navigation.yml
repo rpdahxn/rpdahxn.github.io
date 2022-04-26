@@ -2,12 +2,12 @@
 main:
   #- title: "Home"
   #  url: "/"
-  - title: 'Introduce'
-    url: /about/
+  - title: 'about'
+    url: /about/ # _pages 내의 about 링크로 연결해준다.
   - title: 'Category'
-    url: '/category/'
+    url: '/categories/'
   - title: 'Tags'
-    url: /tag/
+    url: /tags/
 # main:
 # - title: "Quick-Start Guide"
 # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
