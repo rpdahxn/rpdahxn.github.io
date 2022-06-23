@@ -12,10 +12,10 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: 'dark' # default, "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: 'customdefault' # default, "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: 'ko-KR'
+locale: 'en-US'
 title: 'vVbb'
 title_separator: '-'
 subtitle: # site tagline that appears below site title in masthead
@@ -26,7 +26,7 @@ baseurl: # the subpath of your site, e.g. "/blog"
 repository: 'https://github.com/rpdahxn/rpdahxn.github.io' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title: '🕶b' # overrides the website title displayed in the masthead, use " " for no title
+masthead_title: '🕶 b' # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
 comments:
@@ -103,10 +103,10 @@ analytics:
 
 # Site Author
 author:
-  name: 'k__da'
-  avatar: 'assets/profile.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name: 'kidi'
+  avatar: 'assets/profile.jpg'
   bio: 'student'
-  location: 'Somewhere'
+  location: 'South Korea'
   email:
   links:
     - label: 'Email'
