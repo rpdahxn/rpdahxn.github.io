@@ -1,0 +1,24 @@
+/* ==========================================================================
+    custom default
+   ========================================================================== */
+
+/* Colors */
+$background-color: #ffffff !default;
+$text-color: #000000 !default;
+$muted-text-color: #000000 !default;  // 최근 포스트, 최대 1분 소요
+$primary-color: #6ea3c2 !default;
+$border-color: mix(#fff, #2b3b3b, 75%) !default;
+$footer-background-color: mix(#88949cee, #6ea3c2, 90%) !default;
+$link-color: #000000 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$link-color-visited: mix(#6ea3c2, rgb(172, 172, 172), 50%) !default;
+$navicon-link-color-hover: mix(#6ea3c2, rgb(85, 92, 94), 50%) !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
