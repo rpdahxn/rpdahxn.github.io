@@ -12,10 +12,11 @@ toc_icon: "sticky-note"
 ---
 ## EC2 인스턴스 접근하기
 ```python
+# 주의 ! 이때 키파일이 저장된 위치로 우선 이동해야한다.
 # 키 파일에 대해서 소유자만 볼 수 있도록 권한을 변경한다.
 $ chmod 400 (키 파일).pem
 
-$ ssh-i (키 파일).pem ec2-user@(EC2 인스턴스의 퍼블릭IP)
+$ ssh -i (키 파일).pem ec2-user@(EC2 인스턴스의 퍼블릭IP)
 ```
 <br/>
 
