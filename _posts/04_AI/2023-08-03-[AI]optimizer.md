@@ -26,6 +26,6 @@ SGD는 무작정 기울어진 방향으로 진행하기 때문에 기울기가 �
 # AdaGrad
 **각각의** 매개변수에 적응적으로 _adaptive_ 학습률을 조정하면서 학습을 진행한다.     
 # Adam
-직관적으로는 모멘텀과 AdaGrad를 융합한 듯한 방법이다. s
+직관적으로는 모멘텀과 AdaGrad를 융합한 듯한 방법이다.
 ## Reference
 [밑바닥부터 시작하는 딥러닝 ](https://www.yes24.com/Product/Goods/34970929)
