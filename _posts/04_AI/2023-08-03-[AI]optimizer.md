@@ -4,7 +4,6 @@ categories:
   - AI
 toc: true
 toc_sticky: true
-toc_label: " "
 toc_icon: "sticky-note"
 use_math: true
 comments: true
@@ -28,23 +27,22 @@ SGD는 경사면을 따라 일정한 크기의 스텝으로 조금씩 내려가�
 반면 모멘텀 최적화에서는 **이전 그레디언트**가 중요한 요소가 된다.    
 
 매 반복에서 현재 그레디언트를 **모멘텀 벡터** _momentum vector, m_ 에 더하고 이 값을 빼는 방식으로 가중치를 갱신한다. 즉, 이 모멘텀 벡터라는 것에 이전 그레디언트에 대한 정보가 담겨있다.    
-$$
-1. \,m \leftarrow \beta m - \eta\nabla _{\theta} J (\theta)  $$
-$$
-1. \,\theta \leftarrow \theta + m   $$
+$$1. \, m \leftarrow \beta m - \eta\nabla _{\theta} J (\theta)$$
+<br/>
+$$2. \,\theta \leftarrow \theta + m$$
+<br/>
 위 식에서 $\beta$는 모멘텀이 너무 커지는 것을 막아주는 하이퍼파라미터다.  
 
 # AdaGrad
 SGD는 당장의 가장 가파른 경사를 따라 내려가는 방식이었기 때문에 지그재그 형태를 보였다.    
 반면 AdaGrad는 **가장 가파른 차원**을 따라 그레디언트 벡터의 스케일을 감소시키며 따라서 좀 더 효율적으로 움직인다.
 
-$$
-1. \,s \leftarrow s + \nabla _{\theta} J (\theta) \otimes \nabla _{\theta} J (\theta)
-$$ 
-그레디언트의 제곱을 벡터 $s$에 누적한다.    
-$$
-2. \,\theta \leftarrow \theta - \eta\nabla _{\theta} J (\theta) \oslash \sqrt{s + \varepsilon}
-$$    
+$$1.\,s \leftarrow s + \nabla _{\theta} J (\theta) \otimes \nabla _{\theta} J (\theta)$$
+<br/>
+그레디언트의 제곱을 벡터 s에 누적한다.
+<br/>
+$$2. \,\theta \leftarrow \theta - \eta\nabla _{\theta} J (\theta) \oslash \sqrt{s + \varepsilon}$$
+<br/>
 그레디언트 벡터를 $\sqrt{s+\varepsilon}$로 나누어 스케일을 조정한다. 이를 통해 매개변수의 원소 중에서 많이 움직인 원소는 학습률이 낮아진다.
 
 **각각의** 매개변수에 적응적으로 _adaptive_ 학습률을 조정하면서 학습을 진행한다.      
@@ -53,7 +51,7 @@ $$
 <br/>
 
 # Conclusion
-항상 모든 문제에서 뛰어난 최적화 기법이랄 건 없다.     
+항상 모든 문제에서 뛰어난 최적화 기법이란 것은 없다.     
 풀어야 할 문제가 무엇이냐에 따라 가장 적절한 기법은 달라진다.   
 
 ## Reference
