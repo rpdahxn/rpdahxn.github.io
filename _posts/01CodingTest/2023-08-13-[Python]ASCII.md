@@ -1,5 +1,5 @@
 ---
-title: "Coding Test / Python / ASCII"
+title: "Python / ASCII"
 categories:
   - CodingTest
 tags:
