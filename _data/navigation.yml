@@ -2,20 +2,9 @@
 main:
   #- title: "Home"
   #  url: "/"
-  - title: 'about'
-    url: /about/ # _pages 내의 about 링크로 연결해준다.
-  - title: 'Category'
+  - title: 'intro'
+    url: /intro/ # _pages 내의 about 링크로 연결해준다.
+  - title: 'category'
     url: '/categories/'
-  - title: 'Tags'
+  - title: 'tag'
     url: /tags/
-# main:
-# - title: "Quick-Start Guide"
-# url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-# - title: "About"
-#   url: https://mmistakes.github.io/minimal-mistakes/about/
-# - title: "Sample Posts"
-#   url: /year-archive/
-# - title: "Sample Collections"
-#   url: /collection-archive/
-# - title: "Sitemap"
-#   url: /sitemap/
