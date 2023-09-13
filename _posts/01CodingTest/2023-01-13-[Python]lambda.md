@@ -1,7 +1,7 @@
 ---
 title: "Coding Test / Python / lambda"
 categories:
-  - Coding Test 
+  - CodingTest 
 tags:
 toc: true
 toc_sticky: true

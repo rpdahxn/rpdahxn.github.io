@@ -1,7 +1,7 @@
 ---
 title: "[Python] input() vs. sys.stdin.readline()"
 categories:
-  - Coding Test 
+  - CodingTest 
 # toc: true
 # toc_sticky: true
 # toc_label: " "
