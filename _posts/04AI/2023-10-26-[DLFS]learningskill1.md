@@ -38,7 +38,7 @@ $$W \leftarrow W + v$$
 <br/>
 
 # AdaGrad
-학습을 진행하면서 학습률을 점차 줄여가는 방법을 **학습률 감소**_weight decay_ 라고 한다.    
+학습을 진행하면서 학습률을 점차 줄여가는 방법을 **학습률 감소**_learning rate decay_ 라고 한다.    
 이를 발전시킨 게 AdaGrad로, **개별 매개변수에 적응적으로(_adaptive_) 학습률을 조정**하면서  학습을 진행한다.      
 <br/>
 $$h \leftarrow h + \frac{\partial L}{\partial W} \bigodot \frac{\partial L}{\partial W}$$       
