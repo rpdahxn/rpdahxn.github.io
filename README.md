@@ -1,5 +1,4 @@
-## 🤓
-
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=rpdahxn.rpdahxn&left_color=34495e&right_color=1abc9c&left_text=👀)
 
 <!--
 **rpdahxn/rpdahxn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
