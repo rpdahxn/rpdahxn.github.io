@@ -1,0 +1,69 @@
+# ============================================================
+#  This repo is published as a static site — anything committed
+#  is PUBLIC. Keep secrets and local-only files out of git.
+# ============================================================
+
+# --- Secrets / credentials (never commit) ---
+.env
+.env.*
+*.local
+secrets.*
+secret*
+credentials*
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*.cer
+id_rsa
+id_rsa.*
+.netrc
+service-account*.json
+*-credentials.json
+gtag-secret*
+analytics-credentials*
+
+# --- Private / draft content (not for publishing) ---
+private/
+drafts/
+_private/
+*.private
+*.draft
+notes.md
+TODO.private.md
+
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+.#*
+\#*#
+
+# --- Logs / caches / temp ---
+*.log
+.cache/
+.tmp/
+tmp/
+*.tmp
+*.bak
+
+# --- Dependencies (if you ever add tooling) ---
+node_modules/
+.parcel-cache/
+dist/
+.vercel/
+.netlify/
