@@ -1,28 +1,30 @@
 /* ============================================================
    Dahyeon Kye — researcher homepage
-   Tone: 90s retro-anime, dark mode. Pitch black with electric
-   cobalt-blue accent and cool ice-white text. Sharp, glossy,
-   cool — not soft. Serif name, mono meta.
+   Tone: 90s anime, underwater dusk. Deep slate-blue water base,
+   soft steel-blue accent, pale cool text, film grain. Warm
+   dragon-tattoo notes (crimson, gold) used sparingly.
    ============================================================ */
 
 :root {
-  --bg:        #07080c;   /* pitch black, cool undertone   */
-  --bg2:       #0b0f1c;   /* lifted (top)                  */
-  --panel:     #0a0c13;   /* card / frame surface          */
-  --panel-2:   #0d111d;   /* lighter (featured)            */
-  --ink:       #e7ecf3;   /* cool ice-white text           */
-  --muted:     #8893a8;   /* cool blue-grey                */
-  --faint:     #59627a;   /* very muted                    */
+  --bg:        #0b141e;   /* deep dusk slate-blue (water)  */
+  --bg2:       #102230;   /* lifted (top)                  */
+  --panel:     #0d1925;   /* card / frame surface          */
+  --panel-2:   #112230;   /* lighter (featured)            */
+  --ink:       #dfe7ef;   /* pale cool text                */
+  --muted:     #86a0b4;   /* slate blue-grey               */
+  --faint:     #566c7d;   /* very muted                    */
 
-  /* electric-blue palette */
-  --blue:      #2f6bff;   /* electric cobalt               */
-  --blue-2:    #6fa0ff;   /* lighter (hover)               */
-  --ice:       #bcd0ef;   /* pale icy highlight            */
+  /* dusk-water palette */
+  --blue:      #79a7d6;   /* soft steel blue (accent)      */
+  --blue-2:    #a9c8e8;   /* lighter (hover)               */
+  --teal:      #58aeae;   /* water teal                    */
+  --crimson:   #cf4a44;   /* dragon red (warm note)        */
+  --gold:      #d6a23e;   /* dragon gold (warm note)       */
 
   --accent:    var(--blue);
   --accent-2:  var(--blue-2);
-  --line:      rgba(231, 236, 243, 0.12);  /* hairline     */
-  --line-bold: rgba(231, 236, 243, 0.24);  /* strong rule  */
+  --line:      rgba(223, 231, 239, 0.11);  /* hairline     */
+  --line-bold: rgba(223, 231, 239, 0.22);  /* strong rule  */
 
   --font-serif: "Spectral", Georgia, serif;
   --font-mono:  "Space Mono", "Courier New", monospace;
@@ -41,25 +43,38 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   background:
-    radial-gradient(56% 42% at 50% -8%, rgba(47, 107, 255, 0.22) 0%, rgba(7, 8, 12, 0) 60%),
-    radial-gradient(40% 34% at 4% 84%, rgba(47, 107, 255, 0.16) 0%, rgba(7, 8, 12, 0) 62%),
-    radial-gradient(34% 28% at 96% 90%, rgba(111, 160, 255, 0.10) 0%, rgba(7, 8, 12, 0) 60%),
-    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 44%, #05060a 100%);
+    radial-gradient(60% 44% at 50% -6%, rgba(121, 167, 214, 0.20) 0%, rgba(11, 20, 30, 0) 62%),
+    radial-gradient(46% 40% at 8% 88%, rgba(88, 174, 174, 0.16) 0%, rgba(11, 20, 30, 0) 64%),
+    radial-gradient(34% 30% at 90% 80%, rgba(207, 74, 68, 0.10) 0%, rgba(11, 20, 30, 0) 60%),
+    radial-gradient(28% 24% at 78% 96%, rgba(214, 162, 62, 0.08) 0%, rgba(11, 20, 30, 0) 60%),
+    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 46%, #070e16 100%);
   background-attachment: fixed;
 }
 
-/* cool electric atmosphere */
+/* watery atmosphere + vignette */
 .smoke {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.6;
-  background: radial-gradient(44% 34% at 50% 0%, rgba(47, 107, 255, 0.14) 0%, rgba(0,0,0,0) 70%);
-  filter: blur(22px);
+  background:
+    radial-gradient(46% 36% at 50% 2%, rgba(121, 167, 214, 0.12) 0%, rgba(0,0,0,0) 70%),
+    radial-gradient(120% 90% at 50% 36%, rgba(0, 0, 0, 0) 56%, rgba(0, 0, 0, 0.45) 100%);
+  filter: blur(0.3px);
 }
 
-a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(47, 107, 255, 0.5); padding-bottom: 1px; }
+/* film grain (never blocks clicks) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(121, 167, 214, 0.5); padding-bottom: 1px; }
 a:hover { color: var(--accent-2); border-bottom-color: var(--accent-2); }
 strong, b { color: var(--ink); font-weight: 700; }
 
@@ -97,16 +112,6 @@ strong, b { color: var(--ink); font-weight: 700; }
   border: 0;
 }
 .topbar__home:hover { color: var(--accent); }
-.topbar__research {
-  margin: 0;
-  padding: 9px 48px;
-  border-top: 1px solid var(--line);
-  font-size: 11.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.topbar__research-label { color: var(--accent); margin-right: 14px; }
 .topbar__nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .topbar__nav a {
   color: var(--muted);
@@ -137,7 +142,7 @@ strong, b { color: var(--ink); font-weight: 700; }
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--line-bold);
-  background: #0e1424;
+  background: #102634;
 }
 .site-photo img {
   position: absolute;
@@ -166,13 +171,13 @@ strong, b { color: var(--ink); font-weight: 700; }
   line-height: 1.04;
   margin: 0;
   letter-spacing: 0.005em;
-  /* cool ice → electric cobalt */
-  background: linear-gradient(168deg, #eef3fb 0%, #9cb8ef 56%, var(--blue) 100%);
+  /* pale water-light → dusk steel blue */
+  background: linear-gradient(168deg, #eaf1f8 0%, #b7cfe6 54%, var(--blue) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 22px rgba(47, 107, 255, 0.32));
+  filter: drop-shadow(0 2px 18px rgba(121, 167, 214, 0.30));
 }
 .site-sub {
   margin: 12px 0 0;
@@ -190,6 +195,14 @@ strong, b { color: var(--ink); font-weight: 700; }
   line-height: 1.7;
 }
 .masthead__intro a { color: var(--accent); }
+.masthead__research {
+  margin: 16px 0 0;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.masthead__research .research-label { color: var(--accent); margin-right: 12px; }
 
 /* ===================== Section block ===================== */
 .block { margin-bottom: 40px; }
@@ -256,7 +269,7 @@ strong, b { color: var(--ink); font-weight: 700; }
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--accent);
-  border: 1px solid rgba(47, 107, 255, 0.5);
+  border: 1px solid rgba(121, 167, 214, 0.5);
 }
 
 /* ===================== News ===================== */
@@ -273,7 +286,7 @@ strong, b { color: var(--ink); font-weight: 700; }
 .news__date {
   flex: none;
   min-width: 62px;
-  color: var(--muted);
+  color: var(--gold);
   font-size: 12px;
   letter-spacing: 0.03em;
   white-space: nowrap;
@@ -323,7 +336,7 @@ strong, b { color: var(--ink); font-weight: 700; }
   margin: 2px 0 0;
   overflow: hidden;
   border: 1px solid var(--line-bold);
-  background: #0e1424;
+  background: #102634;
 }
 .post__thumb img {
   position: absolute;
@@ -342,7 +355,7 @@ strong, b { color: var(--ink); font-weight: 700; }
 .post__title { color: var(--ink); font-weight: 700; font-size: 14px; line-height: 1.45; }
 .post__date {
   flex: none;
-  color: var(--muted);
+  color: var(--gold);
   font-size: 12px;
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -377,7 +390,6 @@ strong, b { color: var(--ink); font-weight: 700; }
   .wrap { margin: 28px 14px 48px; padding: 0 22px 36px; }
   .topbar { margin: 0 -22px 32px; }
   .topbar__main { padding: 14px 22px; }
-  .topbar__research { padding: 9px 22px; }
   .grid-2 { grid-template-columns: 1fr; gap: 8px; }
   .block--feature { padding: 22px 18px 20px; }
 }
