@@ -1,35 +1,34 @@
 /* ============================================================
    Dahyeon Kye — researcher homepage
-   Tone: 90s anime, underwater dusk. Deep slate-blue water base,
-   soft steel-blue accent, pale cool text, film grain. Warm
-   dragon-tattoo notes (crimson, gold) used sparingly.
+   Tone: dark glamour, glitter & grain. Warm near-black base,
+   sapphire-cobalt starlight accent, champagne-gold and
+   terracotta warm notes, heavy film grain. Cinematic, opulent.
    ============================================================ */
 
 :root {
-  --bg:        #0b141e;   /* deep dusk slate-blue (water)  */
-  --bg2:       #102230;   /* lifted (top)                  */
-  --panel:     #0d1925;   /* card / frame surface          */
-  --panel-2:   #112230;   /* lighter (featured)            */
-  --ink:       #dfe7ef;   /* pale cool text                */
-  --muted:     #86a0b4;   /* slate blue-grey               */
-  --faint:     #566c7d;   /* very muted                    */
+  --bg:        #0e0b0c;   /* warm near-black               */
+  --bg2:       #17110f;   /* lifted warm dark (top)        */
+  --panel:     #130d0e;   /* card / surface                */
+  --panel-2:   #181113;   /* lighter                       */
+  --ink:       #ece3d4;   /* champagne cream text          */
+  --muted:     #a2907e;   /* warm taupe                    */
+  --faint:     #6f6153;   /* very muted                    */
 
-  /* dusk-water palette */
-  --blue:      #79a7d6;   /* soft steel blue (accent)      */
-  --blue-2:    #a9c8e8;   /* lighter (hover)               */
-  --teal:      #58aeae;   /* water teal                    */
-  --crimson:   #cf4a44;   /* dragon red (warm note)        */
-  --gold:      #d6a23e;   /* dragon gold (warm note)       */
+  /* glitter palette */
+  --cobalt:    #3f6be6;   /* sapphire starlight (accent)   */
+  --cobalt-2:  #83a1f2;   /* lighter (hover)               */
+  --gold:      #d8b877;   /* champagne / gold glitter      */
+  --terracotta:#bb4a63;   /* magenta terracotta (자홍)       */
 
-  --accent:    var(--blue);
-  --accent-2:  var(--blue-2);
-  --line:      rgba(223, 231, 239, 0.11);  /* hairline     */
-  --line-bold: rgba(223, 231, 239, 0.22);  /* strong rule  */
+  --accent:    var(--cobalt);
+  --accent-2:  var(--cobalt-2);
+  --line:      rgba(236, 227, 212, 0.11);  /* hairline     */
+  --line-bold: rgba(236, 227, 212, 0.22);  /* strong rule  */
 
-  --font-serif: "Spectral", Georgia, serif;
-  --font-mono:  "Space Mono", "Courier New", monospace;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-mono:  Georgia, "Times New Roman", Times, serif;
 
-  --wrap: 1080px;
+  --wrap: 980px;
 }
 
 * { box-sizing: border-box; }
@@ -38,43 +37,42 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  font-family: var(--font-mono);
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   background:
-    radial-gradient(60% 44% at 50% -6%, rgba(121, 167, 214, 0.20) 0%, rgba(11, 20, 30, 0) 62%),
-    radial-gradient(46% 40% at 8% 88%, rgba(88, 174, 174, 0.16) 0%, rgba(11, 20, 30, 0) 64%),
-    radial-gradient(34% 30% at 90% 80%, rgba(207, 74, 68, 0.10) 0%, rgba(11, 20, 30, 0) 60%),
-    radial-gradient(28% 24% at 78% 96%, rgba(214, 162, 62, 0.08) 0%, rgba(11, 20, 30, 0) 60%),
-    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 46%, #070e16 100%);
+    radial-gradient(52% 40% at 50% -6%, rgba(63, 107, 230, 0.22) 0%, rgba(14, 11, 12, 0) 60%),
+    radial-gradient(46% 40% at 88% 90%, rgba(187, 74, 99, 0.20) 0%, rgba(14, 11, 12, 0) 62%),
+    radial-gradient(40% 34% at 8% 84%, rgba(216, 184, 119, 0.12) 0%, rgba(14, 11, 12, 0) 60%),
+    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 46%, #080606 100%);
   background-attachment: fixed;
 }
 
-/* watery atmosphere + vignette */
+/* dark glamour atmosphere + vignette */
 .smoke {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(46% 36% at 50% 2%, rgba(121, 167, 214, 0.12) 0%, rgba(0,0,0,0) 70%),
-    radial-gradient(120% 90% at 50% 36%, rgba(0, 0, 0, 0) 56%, rgba(0, 0, 0, 0.45) 100%);
+    radial-gradient(46% 36% at 50% 0%, rgba(63, 107, 230, 0.12) 0%, rgba(0,0,0,0) 70%),
+    radial-gradient(130% 96% at 50% 36%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.42) 100%);
   filter: blur(0.3px);
 }
 
-/* film grain (never blocks clicks) */
+/* heavy film grain (never blocks clicks) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 200;
   pointer-events: none;
-  opacity: 0.06;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
-a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(121, 167, 214, 0.5); padding-bottom: 1px; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(63, 107, 230, 0.5); padding-bottom: 1px; }
 a:hover { color: var(--accent-2); border-bottom-color: var(--accent-2); }
 strong, b { color: var(--ink); font-weight: 700; }
 
@@ -83,16 +81,16 @@ strong, b { color: var(--ink); font-weight: 700; }
   position: relative;
   z-index: 1;
   max-width: var(--wrap);
-  margin: 54px auto 72px;
-  padding: 0 48px 40px;
-  background: var(--panel);
-  border: 1px solid var(--line-bold);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  padding: 0 24px 56px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 /* ===================== Top bar ===================== */
 .topbar {
-  margin: 0 -48px 40px;
+  margin: 0 -24px 44px;
   border-bottom: 1px solid var(--line-bold);
 }
 .topbar__main {
@@ -101,7 +99,7 @@ strong, b { color: var(--ink); font-weight: 700; }
   justify-content: space-between;
   gap: 14px 28px;
   flex-wrap: wrap;
-  padding: 16px 48px;
+  padding: 16px 24px;
 }
 .topbar__home {
   color: var(--ink);
@@ -137,12 +135,13 @@ strong, b { color: var(--ink); font-weight: 700; }
 .site-photo {
   position: relative;
   flex: none;
-  width: 116px;
-  height: 144px;
+  width: 150px;
+  height: 150px;
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--line-bold);
-  background: #102634;
+  border-radius: 50%;
+  background: #1a1310;
 }
 .site-photo img {
   position: absolute;
@@ -166,29 +165,21 @@ strong, b { color: var(--ink); font-weight: 700; }
 
 .site-title {
   font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: clamp(34px, 4.6vw, 54px);
-  line-height: 1.04;
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.15;
   margin: 0;
-  letter-spacing: 0.005em;
-  /* pale water-light → dusk steel blue */
-  background: linear-gradient(168deg, #eaf1f8 0%, #b7cfe6 54%, var(--blue) 100%);
+  /* champagne → sapphire, like the glitter gowns */
+  background: linear-gradient(105deg, var(--gold) 0%, var(--ink) 52%, var(--cobalt-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 18px rgba(121, 167, 214, 0.30));
-}
-.site-sub {
-  margin: 12px 0 0;
-  font-size: 11.5px;
-  color: var(--muted);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  filter: drop-shadow(0 1px 12px rgba(63, 107, 230, 0.28));
 }
 .masthead__intro {
   margin: 16px 0 0;
-  max-width: 620px;
+  max-width: 760px;
   font-family: var(--font-serif);
   font-size: 16px;
   color: var(--muted);
@@ -209,41 +200,122 @@ strong, b { color: var(--ink); font-weight: 700; }
 .block:last-of-type { margin-bottom: 8px; }
 
 .block__title {
+  font-family: var(--font-serif);
   font-weight: 700;
   color: var(--ink);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 0;
+  text-transform: none;
   margin: 0 0 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line-bold);
 }
 .block p { margin: 0 0 12px; }
 .block__sub { color: var(--muted); font-size: 13.5px; margin: 0 0 16px; }
 
-/* ===================== Featured Publications ===================== */
-.block--feature {
-  margin: 0 0 44px;
-  padding: 28px 30px 26px;
-  background: var(--panel-2);
-  border: 1px solid var(--line);
-  border-top: 1px solid var(--accent);
-}
-.block__head {
-  margin: 0 0 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line);
-}
-.block--feature .block__title {
-  font-size: 13px;
-  letter-spacing: 0.22em;
+/* ===================== Publications (plain academic section) ===================== */
+.block--feature { margin: 0 0 40px; }
+.block__head { margin: 0; }
+
+/* ===================== Publication cards (poster grid) ===================== */
+.cardgrid {
+  list-style: none;
   margin: 0;
   padding: 0;
-  border: 0;
 }
-.block--feature .post__title { font-size: 14.5px; }
-.block--feature .post__thumb { width: 150px; height: 94px; }
-.block--feature .post { padding: 15px 0; }
+.pcard {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pcard:first-child { border-top: 1px solid var(--line); }
+.pcard__thumb {
+  position: relative;
+  flex: none;
+  width: 180px;
+  height: 112px;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(150deg, #201512 0%, #14100f 100%);
+  border: 1px solid var(--line-bold);
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.pcard__thumb img,
+.pcard__thumb video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* show the whole preview, no cropping */
+  display: block;
+  transition: transform .35s ease;
+}
+.pcard:hover .pcard__thumb { border-color: var(--accent); box-shadow: 0 0 18px rgba(63, 107, 230, 0.28); }
+
+/* paper emblem (author-made icon) — small logo in front of the title */
+.pcard__titleicon {
+  height: 22px;
+  width: auto;
+  max-width: 34px;
+  object-fit: contain;
+  border-radius: 4px;
+  vertical-align: -5px;
+  margin-right: 8px;
+}
+.pcard:hover .pcard__thumb img,
+.pcard:hover .pcard__thumb video { transform: scale(1.04); }
+/* venue badge — filled with the conference's highlight color */
+.pcard__venue {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  color: #fff;
+  background: #555;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.pcard__venue--eccv  { background: #7b52d6; }                 /* ECCV — violet   */
+.pcard__venue--cvpr  { background: #2f74e0; }                 /* CVPR — blue     */
+.pcard__venue--tcsvt { background: #109e8b; }                 /* IEEE TCSVT — teal */
+.pcard__venue--review {
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line-bold);
+  box-shadow: none;
+}
+
+/* group heading (e.g., Under Review) */
+.pubgroup {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--muted);
+  margin: 30px 0 6px;
+}
+.pcard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+.pcard__title { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--ink); }
+.pcard__by { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+.pcard__links { margin: 2px 0 0; font-size: 13.5px; color: var(--faint); }
+.pcard__links a { color: var(--accent); border: 0; }
+.pcard__links a:hover { color: var(--accent-2); }
+
+@media (max-width: 560px) {
+  .pcard { flex-direction: column; gap: 12px; }
+  .pcard__thumb { width: 100%; height: auto; aspect-ratio: 16 / 10; }
+}
 
 /* ===================== Secondary two-column grid ===================== */
 .grid-2 {
@@ -269,7 +341,7 @@ strong, b { color: var(--ink); font-weight: 700; }
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--accent);
-  border: 1px solid rgba(121, 167, 214, 0.5);
+  border: 1px solid rgba(63, 107, 230, 0.5);
 }
 
 /* ===================== News ===================== */
@@ -294,10 +366,10 @@ strong, b { color: var(--ink); font-weight: 700; }
 .news__text { color: var(--ink); }
 .news__where { color: var(--muted); }
 
-/* News promoted: full width, larger */
-.block--news { margin-bottom: 40px; }
-.block--news .newslist li { padding: 14px 0; font-size: 15px; gap: 22px; }
-.block--news .news__date { min-width: 92px; font-size: 13.5px; }
+/* News promoted: full-width single-column timeline */
+.block--news { margin-bottom: 44px; }
+.block--news .newslist li { padding: 15px 0; font-size: 15px; gap: 24px; }
+.block--news .news__date { min-width: 100px; font-size: 13.5px; }
 
 /* inline contact links */
 .linklist--inline {
@@ -336,7 +408,7 @@ strong, b { color: var(--ink); font-weight: 700; }
   margin: 2px 0 0;
   overflow: hidden;
   border: 1px solid var(--line-bold);
-  background: #102634;
+  background: #1a1310;
 }
 .post__thumb img {
   position: absolute;
@@ -387,15 +459,7 @@ strong, b { color: var(--ink); font-weight: 700; }
 }
 /* ===================== Responsive ===================== */
 @media (max-width: 760px) {
-  .wrap { margin: 28px 14px 48px; padding: 0 22px 36px; }
-  .topbar { margin: 0 -22px 32px; }
-  .topbar__main { padding: 14px 22px; }
-  .grid-2 { grid-template-columns: 1fr; gap: 8px; }
-  .block--feature { padding: 22px 18px 20px; }
-}
-@media (max-width: 520px) {
-  .post__row { flex-direction: column; gap: 2px; }
-  .post__date { order: -1; }
-  .post--media { gap: 14px; }
-  .block--feature .post__thumb { width: 104px; height: 66px; }
+  .wrap { padding: 0 18px 44px; }
+  .topbar { margin: 0 -18px 36px; }
+  .topbar__main { padding: 14px 18px; }
 }

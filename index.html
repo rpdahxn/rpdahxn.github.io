@@ -6,24 +6,18 @@
   <title>Dahyeon Kye — Computer Vision Researcher</title>
   <meta name="description" content="Dahyeon Kye — PhD student in Computer Vision at Chung-Ang University (CMLab). Research, publications, and CV." />
 
-  <!-- Canonical URL — change to your live site URL -->
-  <link rel="canonical" href="https://YOUR_DOMAIN/" />
+  <link rel="canonical" href="https://rpdahxn.github.io/" />
 
-  <!-- Google Search Console verification — paste the code from the "HTML tag" method -->
-  <meta name="google-site-verification" content="REPLACE_WITH_GSC_VERIFICATION_CODE" />
-
-  <!-- Google Analytics 4 (gtag.js) — replace G-XXXXXXXXXX with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91B3WG8EWQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-91B3WG8EWQ');
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <!-- Georgia (system serif), like the jemdoc academic reference — no web font needed -->
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -35,7 +29,7 @@
     <!-- ===== Top bar ===== -->
     <div class="topbar">
       <div class="topbar__main">
-        <a class="topbar__home" href="#home">Dahyeon Kye</a>
+        <a class="topbar__home" href="#home">HOME</a>
         <nav class="topbar__nav menu" aria-label="Site menu">
           <a href="#publications">Publications</a>
           <a href="#news">News</a>
@@ -49,16 +43,14 @@
     <header class="masthead">
       <!-- Replace src with your photo (e.g. me.jpg). Placeholder shows until then. -->
       <figure class="site-photo">
-        <img src="me.jpg" alt="Dahyeon Kye" onerror="this.remove()" />
+        <img src="KakaoTalk_Photo_2025-05-22-12-39-59.jpeg" alt="Dahyeon Kye" onerror="this.remove()" />
         <figcaption>Portrait</figcaption>
       </figure>
       <div class="masthead__text">
         <h1 class="site-title">Dahyeon Kye</h1>
-        <p class="site-sub">PhD Student &middot; Computer Vision &middot; Chung-Ang University</p>
         <p class="masthead__intro">
-          PhD student in the <a href="https://cmlab.cau.ac.kr/">CMLab</a>, advised
-          by Prof. Jihyong Oh. Working on computer vision — generative models and
-          video generation.
+          Hi, I'm Dahyeon Kye, a PhD student in the <a href="https://cmlab.cau.ac.kr/">CMLab</a>, advised
+          by Prof. Jihyong Oh. Working on computer vision — generative models.
         </p>
         <p class="masthead__research">
           <span class="research-label">Research Area</span>
@@ -73,14 +65,14 @@
       <ul class="newslist">
         <li>
           <span class="news__date">2026.10</span>
-          <span class="news__text">Attending <b>ECCV 2026</b>. <span class="news__where">[Malmoi, Country]</span></span>
+          <span class="news__text">Attending <b>ECCV 2026</b>. <span class="news__where">[Malmö, Sweden]</span></span>
         </li>
         <li>
           <span class="news__date">2026.06</span>
           <span class="news__text">CHIMERA accepted at ECCV 2026!</span>
         </li>
         <li>
-          <span class="news__date">[YYYY.MM]</span>
+          <span class="news__date">2026.03</span>
           <span class="news__text">AceVFI accepted at IEEE TCSVT!
           </span>
         </li>
@@ -92,62 +84,54 @@
       <div class="block__head">
         <h2 class="block__title">Publications</h2>
       </div>
-      <ul class="postlist">
-        <li class="post post--media">
-          <!-- Replace src with the paper thumbnail (e.g. thumbs/chimera.jpg). -->
-          <figure class="post__thumb">
-            <img src="thumbs/chimera.jpg" alt="" onerror="this.remove()" />
-            <figcaption></figcaption>
+      <ul class="cardgrid">
+        <li class="pcard">
+          <!-- Preview: <video> for animated results (auto-plays), or <img> for a static teaser. -->
+          <figure class="pcard__thumb">
+            <video src="thumbs/chimera.mp4" autoplay muted loop playsinline preload="metadata"></video>
           </figure>
-          <div class="post__content">
-            <div class="post__row">
-              <span class="post__title">CHIMERA: Adaptive Cache Injection and Semantic Anchor Prompting for Zero-shot Image Morphing with Morphing-oriented Metric</span>
-              <span class="post__date">ECCV 2026</span>
-            </div>
-            <p class="post__by"><strong>Dahyeon Kye</strong>*, Jeahun Sung*, Minkyu Jeon, Jihyong Oh&dagger;</p>
-            <p class="post__links"><a href="https://cmlab-korea.github.io/CHIMERA/">Project page</a> &middot; <a href="https://arxiv.org/abs/2512.07155">arXiv</a></p>
+          <div class="pcard__body">
+            <span class="pcard__venue pcard__venue--eccv">ECCV 2026</span>
+            <h3 class="pcard__title">🦁 CHIMERA: Adaptive Cache Injection and Semantic Anchor Prompting for Zero-shot Image Morphing with Morphing-oriented Metric</h3>
+            <p class="pcard__by"><strong>Dahyeon Kye</strong>*, Jeahun Sung*, Minkyu Jeon, Jihyong Oh&dagger;</p>
+            <p class="pcard__links"><a href="https://cmlab-korea.github.io/CHIMERA/">Project page</a> &middot; <a href="https://arxiv.org/abs/2512.07155">arXiv</a></p>
           </div>
         </li>
-        <li class="post post--media">
-          <figure class="post__thumb">
-            <img src="thumbs/flair.jpg" alt="" onerror="this.remove()" />
-            <figcaption></figcaption>
+        <li class="pcard">
+          <figure class="pcard__thumb">
+            <img src="thumbs/flair.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()" />
           </figure>
-          <div class="post__content">
-            <div class="post__row">
-              <span class="post__title">FLAIR: Frequency- and Locality-Aware Implicit Neural Representations</span>
-              <span class="post__date">CVPR 2026 (F)</span>
-            </div>
-            <p class="post__by">Sukhun Ko, Seokhyun Yoon, <strong>Dahyeon Kye</strong>, Kyle Min, Chanho Eom, Jihyong Oh&dagger;</p>
-            <p class="post__links"><a href="https://cmlab-korea.github.io/FLAIR/">Project page</a> &middot; <a href="https://www.arxiv.org/abs/2508.13544">arXiv</a> &middot; <a href="https://github.com/CMLab-Korea/CVPRF26-FLAIR">Code</a></p>
+          <div class="pcard__body">
+            <span class="pcard__venue pcard__venue--cvpr">CVPR 2026 (Findings)</span>
+            <h3 class="pcard__title">✨ FLAIR: Frequency- and Locality-Aware Implicit Neural Representations</h3>
+            <p class="pcard__by">Sukhun Ko, Seokhyun Yoon, <strong>Dahyeon Kye</strong>, Kyle Min, Chanho Eom, Jihyong Oh&dagger;</p>
+            <p class="pcard__links"><a href="https://cmlab-korea.github.io/FLAIR/">Project page</a> &middot; <a href="https://www.arxiv.org/abs/2508.13544">arXiv</a> &middot; <a href="https://github.com/CMLab-Korea/CVPRF26-FLAIR">Code</a></p>
           </div>
         </li>
-        <li class="post post--media">
-          <figure class="post__thumb">
-            <img src="thumbs/acevfi.jpg" alt="" onerror="this.remove()" />
-            <figcaption></figcaption>
+        <li class="pcard">
+          <figure class="pcard__thumb">
+            <img src="thumbs/acevfi.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()" />
           </figure>
-          <div class="post__content">
-            <div class="post__row">
-              <span class="post__title">AceVFI: A Comprehensive Survey of Advances in Video Frame Interpolation</span>
-              <span class="post__date">IEEE TCSVT</span>
-            </div>
-            <p class="post__by"><strong>Dahyeon Kye</strong>, Changhyun Roh, Sukhun Ko, Chanho Eom, Jihyong Oh&dagger;</p>
-            <p class="post__links"><a href="https://ieeexplore.ieee.org/document/11427010">Paper</a> &middot; <a href="https://arxiv.org/abs/2506.01061">arXiv</a> &middot; <a href="https://github.com/CMLab-Korea/Awesome-Video-Frame-Interpolation">Code</a></p>
+          <div class="pcard__body">
+            <span class="pcard__venue pcard__venue--tcsvt">IEEE TCSVT 2026</span>
+            <h3 class="pcard__title"><img class="pcard__titleicon" src="thumbs/acevfi-icon.png" alt="" onerror="this.remove()" />AceVFI: A Comprehensive Survey of Advances in Video Frame Interpolation</h3>
+            <p class="pcard__by"><strong>Dahyeon Kye</strong>, Changhyun Roh, Sukhun Ko, Chanho Eom, Jihyong Oh&dagger;</p>
+            <p class="pcard__links"><a href="https://ieeexplore.ieee.org/document/11427010">Paper</a> &middot; <a href="https://arxiv.org/abs/2506.01061">arXiv</a> &middot; <a href="https://github.com/CMLab-Korea/Awesome-Video-Frame-Interpolation">Code</a></p>
           </div>
         </li>
-        <li class="post post--media">
-          <figure class="post__thumb">
-            <img src="thumbs/refgcsr.jpg" alt="" onerror="this.remove()" />
-            <figcaption></figcaption>
+      </ul>
+
+      <h3 class="pubgroup">Under Review / Preprints</h3>
+      <ul class="cardgrid">
+        <li class="pcard">
+          <figure class="pcard__thumb">
+            <img src="thumbs/refgcsr.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()" />
           </figure>
-          <div class="post__content">
-            <div class="post__row">
-              <span class="post__title">RefGC-SR&sup2;: Reference-guided Generated Content Super-Resolution and Refinement</span>
-              <span class="post__date">arXiv 2026</span>
-            </div>
-            <p class="post__by">Jeahun Sung*, <strong>Dahyeon Kye</strong>*, Soo Ye Kim&dagger;, Jihyong Oh&dagger;</p>
-            <p class="post__links"><a href="https://cmlab-korea.github.io/RefGC-SR2/">Project page</a> &middot; <a href="https://arxiv.org/abs/2606.15158">arXiv</a></p>
+          <div class="pcard__body">
+            <span class="pcard__venue pcard__venue--review">Preprint &middot; Under review</span>
+            <h3 class="pcard__title"><img class="pcard__titleicon" src="thumbs/refgcsr-icon.png" alt="" onerror="this.remove()" />RefGC-SR&sup2;: Reference-guided Generated Content Super-Resolution and Refinement</h3>
+            <p class="pcard__by">Jeahun Sung*, <strong>Dahyeon Kye</strong>*, Soo Ye Kim&dagger;, Jihyong Oh&dagger;</p>
+            <p class="pcard__links"><a href="https://cmlab-korea.github.io/RefGC-SR2/">Project page</a> &middot; <a href="https://arxiv.org/abs/2606.15158">arXiv</a></p>
           </div>
         </li>
       </ul>
@@ -161,13 +145,12 @@
 
     <!-- ===== Contact (compact icon bar) ===== -->
     <section id="contact" class="block contact">
-      <h2 class="block__title">Contact &amp; Links</h2>
+      <h2 class="block__title">🦉 Contact &amp; Links</h2>
       <ul class="linklist--inline">
         <li><a href="cv.pdf">CV (PDF)</a></li>
         <li><a href="mailto:rpekgus@cau.ac.kr">rpekgus@cau.ac.kr</a></li>
         <li><a href="https://scholar.google.com/citations?user=B9OneWIAAAAJ&amp;hl=ko">Google Scholar</a></li>
         <li><a href="https://github.com/rpdahxn">GitHub</a></li>
-        <li><a href="https://cmlab.cau.ac.kr/">CMLab</a></li>
         <li class="muted">📍 Seoul, South Korea</li>
       </ul>
     </section>
@@ -175,7 +158,7 @@
     <!-- ===== Footer ===== -->
     <footer class="site-foot">
       <span>&copy; <span id="year">2026</span> Dahyeon Kye</span>
-      <span>Chung-Ang University &middot; CMLab</span>
+      <!-- <span>Chung-Ang University &middot; CMLab</span> -->
     </footer>
 
   </main>

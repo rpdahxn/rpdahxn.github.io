@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace YOUR_DOMAIN with your live host (e.g. rpdahxn.github.io)
-Sitemap: https://YOUR_DOMAIN/sitemap.xml
+Sitemap: https://rpdahxn.github.io/sitemap.xml
